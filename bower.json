@@ -1,0 +1,19 @@
+{
+  "name": "simple-js-app-cljs",
+  "version": "0.0.0",
+  "authors": [
+    "Pavel Pomerantsev <pomerantsevp@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fetch": "~0.7.0",
+    "chance": "~0.7.3"
+  }
+}
