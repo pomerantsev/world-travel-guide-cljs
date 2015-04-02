@@ -1,4 +1,8 @@
-(ns travel-guide.core)
+(ns travel-guide.core
+  (:require [clojure.browser.repl :as repl]))
+
+(defonce conn
+  (repl/connect "http://localhost:9000/repl"))
 
 (defn get-template
   [scope]
@@ -9,7 +13,7 @@
 
 (defn update-model
   []
-  (let [country-name (.country (js/Chance.) {:full true})
+  (let [country-name (.country (js/Chance.) (js-obj "full" true))
         encoded-country-name (js/encodeURIComponent country-name)]
     (-> (js/fetch (str "https://country-images.herokuapp.com/image?q="
                        encoded-country-name))
